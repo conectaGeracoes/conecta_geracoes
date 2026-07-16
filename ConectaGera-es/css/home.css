@@ -869,52 +869,81 @@ hr {
   
 }
 
-/* =======================
-   FOOTER
-======================= */
-
 footer {
-  background: #7f56ff;
+  position: relative;
+  margin-top: 45px;
+  background: #8b5cf6;
   color: #fff;
-  padding: 50px 20px 36px;
+  padding: 88px 24px 28px;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+  overflow: visible;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: -52px;
+  height: 85px;
+  background: #ffff;
+  border-radius: 0 0 71% 71% / 0 0 100% 100%;
+  z-index: 0;
 }
 
 .footer-container {
-  max-width: 920px;
+  position: relative;
+  z-index: 1;
+  max-width: 1215px;
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 18px;
 }
 
 .logo-footer {
-  width: 120px;
-  margin: 0;
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  width: 102px;
+  height: auto;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .footer-tagline {
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 680px;
+  margin: 0 0 13px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.35;
   font-weight: 500;
+}
+
+.footer-container hr {
+  width: min(100%, 1215px);
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 34px;
-  flex-wrap: wrap;
+  gap: 132px;
+  width: 100%;
+  padding: 19px 0 27px;
 }
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.95);
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity 0.25s ease;
 }
 
@@ -923,9 +952,42 @@ footer {
 }
 
 .footer-copy {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.84;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 8px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  footer {
+    margin-top: 45px;
+    padding: 84px 20px 28px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+  footer::before {
+    left: 5%;
+    right: 5%;
+    top: -48px;
+    height: 92px;
+  }
+
+  .logo-footer {
+    top: -118px;
+    width: 96px;
+  }
+
+  .footer-tagline {
+    max-width: 320px;
+    font-size: 16px;
+  }
+
+  .footer-links {
+    gap: 44px;
+    padding: 18px 0 25px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -934,16 +996,3 @@ footer {
   }
 }
 
-
-/* =======================
-   COPYRIGHT
-======================= */
-
-.footer-container p{
-
-    font-size:14px;
-
-    opacity:.85;
-
-    text-align:center;
-}
