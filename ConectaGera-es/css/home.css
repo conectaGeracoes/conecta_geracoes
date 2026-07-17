@@ -906,9 +906,9 @@ footer::before {
 
 .logo-footer {
   position: absolute;
-  top: -10rem;
+  top: -15rem;
   left: 50%;
-  width: 102px;
+  width: 152px;
   height: auto;
   transform: translateX(-50%);
   z-index: 2;
