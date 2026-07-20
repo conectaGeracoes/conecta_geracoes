@@ -1,89 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-* {
-  margin: 0px;
-  margin-top: 0px;
-  padding: 0px;
-  font-family: 'Ubuntu', sans-serif;
-}
 
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 .section {
   padding: 5rem 4rem;
   margin-top: 0 auto;
   max-width: 100%;
-}
-
-.header {
-  width: 100%;
-  background: #fff;
-  padding: 0px 20px;
-}
-
-.container-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 50px;
-  margin: 0;
-}
-.img img {
-  width: 170px;
-  margin-left: 90px;
-}
-/*
-.logo{
-  margin-left: 0px;
-  margin-right: 120px;
-}
-
-.logo img{
-    width: 100px;
-    margin-left: 0;
-    margin-right: 100px;
-}
- */
-
-.navbar nav {
-  display: flex;
-  gap: 30px;
-  margin: 0px;
-  width: fit-content;
-  padding: 0px 350px;
-  margin: 0px 0px 80px 0px;
-}
-
-.navbar button {
-  width: 190px;
-  height: 60px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: white;
-  color: #6040ce;
-  font-size: 1.3rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.navbar button:hover {
-  background: #6040ce;
-  color: #fff;
-  transform: scale(1.1);
-}
-
-.navbar .ativo {
-  background: #6040ce;
-  color: white;
-  border: none;
-  transition: 0.5s;
-}
-
-.navbar .ativo:hover {
-  background: #fff;
-  color: #6040ce;
 }
 
 .hero {
@@ -125,16 +46,12 @@ body {
   border-color: #6959cd;
   color: #fff;
 }
-/*
-.pesquisa input::placeholder{
-    color: #6E50D3;
-}*/
 
 .imagem {
   width: fit-content;
   position: relative;
   padding: 0px 0px;
-  background-image: url(../img/Vector\ 1.png);
+  background-image: url(../assets/img/Vector\ 1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -158,23 +75,39 @@ body {
   top: 40px;
   left: 90px;
   animation-delay: 0s;
+  transition: .3s ease;
+}
+.icon-whatsapp:hover{
+ width: 100px;
 }
 .icon-governo {
   width: 100px;
   bottom: 30px;
   left: 30px;
   animation-delay: 0.8s;
+  transition: .3s ease;
+}
+.icon-governo:hover{
+ width: 100px;
 }
 
 .icon-chamada-video {
   top: 100px;
   right: 50px;
   animation-delay: 1.2s;
+  transition: .3s ease;
+}
+.icon-chamada-video:hover{
+ width: 100px;
 }
 .icon-seguranca {
   left: 100px;
   top: 290px;
   animation-delay: 0.4s;
+  transition: .3s ease;
+}
+.icon-seguranca:hover{
+ width: 100px;
 }
 
 @keyframes flutuar {
@@ -326,43 +259,47 @@ body {
   border-radius: 30px;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0px;
+  padding: 40px 0px;
   gap: 50px;
 }
 /*
-.aprendizado {
-    width: 90%;
-    max-width: 1155px;
-    margin: 60px auto;
-    background: linear-gradient(90deg, #6C3EF4);
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 50px;
-}
-*/
+.container-aprendizado::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}*/
+
 .foto {
   width: 280px;
   padding: 0px 10px;
   max-width: fit-content;
 }
-.letras {
-  max-width: 450px;
+.letras div{
+  height: max-content;
 }
 
 .letras .h1,
 .letras,
 .p {
-  position: relative;
-  max-width: 450px;
+
   color: #fff;
-  display: flex;
 }
 
-.h1 {
-  margin-left: -150px;
-  font-weight: 150;
+.letras h1 {
+  margin-left: -130px;
+  font-weight: 2.5rem;
+  top: px;
+  height: max-content;
+  padding: 0px;
+  margin: 0px 10px 30px 10px;
+}
+.letras p {
+  font-size: 1.5rem;
+
 }
 
 .beneficios {
@@ -375,7 +312,7 @@ body {
   color: white;
   border-radius: 15px;
   padding: 15px;
-  margin: 5px auto;
+  margin: 0px auto 30px;
   max-width: 1100px;
   flex-shrink: 0;
 }
@@ -455,16 +392,16 @@ body {
 }
 
 .tutoriais .seta {
-  width: 30px;
+  width: 20px;
   background: #fff;
-  height: 50px;
-  margin: 0px;
+  height: auto;
+  margin: 0px 10px;
 }
 
 .card-tutoriais-whatsApp .icone-whatsapp-tutorial {
   margin: 0px;
   display: flex;
-  height: 30px;
+  height: auto;
   width: 120px;
   background: #fff;
   padding: 0px 12px;
@@ -537,7 +474,7 @@ body {
   margin: 0px;
   display: inline-flex;
   position: relative;
-  height: 40px;
+  height: auto;
   width: 120px;
   background: #fff;
   padding: 0px 12px;
@@ -546,12 +483,12 @@ body {
 .card-tutoriais-transporte:hover {
   transform: scale(1.03);
 }
-.icones-transportes {
+.icones-transporte {
   display: flex;
   gap: 12px;
   margin-top: 15px;
 }
-.icones-transportes img {
+.icones-transporte img {
   display: flex;
   position: relative;
 }
@@ -570,13 +507,19 @@ body {
   display: flex;
 }
 
-.card-tutoriais-serviços img {
-  width: 60px;
+.card-tutoriais-servicos .icone-tutorial-servico img {
+  width: 20px;
   height: 60px;
   background: #ece9d8;
   padding: 12px;
   border-radius: 15px;
   margin-right: 20px;
+}
+.texto-servicos img{
+  width: 120px;
+  height: auto;
+  padding: 20px 15px 5px 0px;
+
 }
 
 .card-tutoriais-servicos {
@@ -595,7 +538,6 @@ body {
 }
 .texto-servicos {
   flex: 1;
-  display: flex;
   flex-direction: column;
   gap: 15px;
 }
@@ -604,9 +546,7 @@ body {
   font-size: 32px;
   color: #222;
 }
-.icone-tutorial {
-  width: 110px;
-  height: auto;
+.icone-tutorial-servico img{
   padding: 0;
   margin: 0;
   background: none;
