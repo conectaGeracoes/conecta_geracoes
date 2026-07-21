@@ -191,47 +191,27 @@
 .whatsapp {
   background: #e8f8e5;
   color: #000;
-  border: 2px solid #67c45b;
 }
-.whatsapp:hover {
-  background: #c1ffc1;
-  color: #228b22;
-  border-color: #c1ffc1;
-}
+
 
 .seguranca {
   background: #f5e2ff;
   color: #000;
-  border: 2px solid #7a7aff;
-}
-.seguranca:hover {
-  background: #ab82ff;
-  color: #eed2ee;
-  border-color: #ab82ff;
 }
 
 .servicos {
   background: #ece9d8;
   color: #000;
-  border: 2px solid #d6a01e;
 }
-.servicos:hover {
-  background: #eee8aa;
-  border-color: #eee8aa;
-  color: #8b4726;
-}
+
 
 .transporte {
   background: #eef8ff;
   color: #000;
-  border: 2px solid #6ab8ff;
+
 }
 
-.transporte:hover {
-  background: #c6e2ff;
-  color: #27408b;
-  border-color: #c6e2ff;
-}
+
 
 @media (max-width: 1024px) {
   .cards {
@@ -397,248 +377,103 @@
   color: white;
 }
 
-.tutoriais {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
-  position: relative;
-}
-.card-tutoriais {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  transition: 0.5s ease;
+/* TUTORIAIS */
+.tutoriais{
+    max-width:1100px;
+    margin:60px auto;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
 }
 
-.tutoriais .seta {
-  width: 20px;
-  background: #fff;
-  height: auto;
-  margin: 0px 10px;
+/* CARD */
+.card-tutorial{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#FFF;
+    padding:22px 30px;
+    border-radius:22px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    transition:.3s ease;
 }
 
-.card-tutoriais-whatsApp .icone-whatsapp-tutorial {
-  margin: 0px;
-  display: flex;
-  height: auto;
-  width: 120px;
-  background: #fff;
-  padding: 0px 12px;
-  position: relative;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px 10px 0px 10px;
+.card-tutorial:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(108,62,244,.18);
 }
 
-.card-tutoriais-whatsApp:hover {
-  transform: scale(1.03);
+/* ÍCONE PRINCIPAL */
+.icone-card{
+    width:72px;
+    height:72px;
+    padding:14px;
+    border-radius:18px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
-.card-tutoriais:hover {
-  transform: translateY(-3px);
-}
-.card-tutoriais-whatsApp {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 20px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.8s ease;
+/* Cores dos ícones */
+.whatsapp{
+    background:#EAF8E7;
 }
 
-.card-tutoriais-whatsApp img {
-  width: 60px;
-  height: 60px;
-  background: #e8f8e5;
-  padding: 12px;
-  border-radius: 15px;
-  margin-right: 20px;
+.transporte{
+    background:#EDF6FF;
 }
 
-.card-tutoriais-whatsApp div {
-  flex: 1;
+.servicos{
+    background:#FFF6E4;
 }
 
-.card-tutoriais-whatsApp h3 {
-  font-size: 32px;
-  margin: 0;
-  color: #222;
-  font-weight: bold;
-}
-.card-tutoriais-transporte img {
-  width: 60px;
-  height: 60px;
-  background: #eef8ff;
-  padding: 12px;
-  border-radius: 15px;
-  margin-right: 20px;
+.seguranca{
+    background:#F7E9FF;
 }
 
-.card-tutoriais-transporte {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 20px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.8s ease;
-}
-.card-tutoriais-transporte .icone-tutorial {
-  margin: 0px;
-  display: inline-flex;
-  position: relative;
-  height: auto;
-  width: 120px;
-  background: #fff;
-  padding: 0px 12px;
-  padding: 15px 10px 0px 10px;
-}
-.card-tutoriais-transporte:hover {
-  transform: scale(1.03);
-}
-.icones-transporte {
-  display: flex;
-  gap: 12px;
-  margin-top: 15px;
-}
-.icones-transporte img {
-  display: flex;
-  position: relative;
-}
-.texto-transporte {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 0 20px;
+/* CONTEÚDO */
+.conteudo-card{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-.card-tutoriais-transporte h3 {
-  font-size: 32px;
-  margin: 0;
-  color: #222;
-  font-weight: bold;
-  display: flex;
+.conteudo-card h3{
+    margin:0;
+    color:#1E1E1E;
+    font-size:2rem;
+    font-weight:700;
+    line-height:1.2;
 }
 
-.card-tutoriais-servicos .icone-tutorial-servico img {
-  width: 20px;
-  height: 60px;
-  background: #ece9d8;
-  padding: 12px;
-  border-radius: 15px;
-  margin-right: 20px;
-}
-.texto-servicos img{
-  width: 120px;
-  height: auto;
-  padding: 20px 15px 5px 0px;
-
+/* TAGS */
+.tags{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.card-tutoriais-servicos {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.8s ease;
-}
-.card-tutoriais-servicos:hover {
-  transform: scale(1.03);
-}
-.texto-servicos {
-  flex: 1;
-  flex-direction: column;
-  gap: 15px;
-}
-.texto-servicos h3 {
-  margin: 0;
-  font-size: 32px;
-  color: #222;
-}
-.icone-tutorial-servico img{
-  padding: 0;
-  margin: 0;
-  background: none;
-}
-.card-tutoriais-servicos div {
-  flex: 1;
+.tags img{
+    height:34px;
+    width:auto;
+    object-fit:contain;
 }
 
-.card-tutoriais-servicos h3 {
-  font-size: 32px;
-  margin: 0;
-  color: #222;
-  font-weight: bold;
+/* SETA */
+.seta{
+    width:18px;
+    height:auto;
+    opacity:.55;
+    transition:.3s;
 }
 
-.card-tutoriais-seguranca img {
-  background: #f5e2ff;
-  width: 60px;
-  height: 60px;
-  padding: 12px;
-  border-radius: 15px;
-  margin-right: 20px;
-}
-.card-tutoriais-seguranca {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: 0.8s ease;
-}
-.card-tutoriais-seguranca:hover {
-  transform: scale(1.03);
-}
+.card-tutorial:hover .seta{
+    transform:translateX(8px);
+    opacity:1;
 
-.card-tutoriais-seguranca div {
-  flex: 1;
 }
-.texto-seguranca {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.texto-seguranca h3 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #222;
-}
-.card-tutoriais-seguranca .icone-tutorial {
-  width: 110px;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  background: none;
-}
-.card-tutoriais-seguranca h3 {
-  font-size: 32px;
-  margin: 0;
-  color: #222;
-  font-weight: bold;
-}
-
 .sobre {
   max-width: 1200px;
   margin: 10px auto;
@@ -696,7 +531,6 @@
 }
 
 /* Responsivo */
-
 @media (max-width: 900px) {
   .sobre {
     flex-direction: column;
