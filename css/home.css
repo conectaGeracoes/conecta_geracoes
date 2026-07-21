@@ -251,16 +251,16 @@
   }
 }
 .container-aprendizado {
-  position: relative;
-  display: flex;
-  max-width: 1210px;
-  margin: 60px auto;
-  background: #6c3ef4;
-  border-radius: 30px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0px;
-  gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1210px;
+    margin: 60px auto;
+    padding: 35px 50px;
+    background: #6c3ef4;
+    border-radius: 30px;
+    gap: 55px;
+    position: relative;
 }
 /*
 .container-aprendizado::before {
@@ -273,33 +273,53 @@
   background: rgba(255, 255, 255, 0.5);
 }*/
 
-.foto {
-  width: 280px;
-  padding: 0px 10px;
-  max-width: fit-content;
+.foto{
+    width: 210px;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: -20px;
+}
+
+.foto img{
+    width:100%;
+    display:block;
 }
 .letras div{
   height: max-content;
 }
-
-.letras .h1,
-.letras,
-.p {
-
-  color: #fff;
+.letras{
+    flex: 1;
+    max-width: 520px;
 }
 
-.letras h1 {
-  margin-left: -130px;
-  font-weight: 2.5rem;
-  top: px;
-  height: max-content;
-  padding: 0px;
-  margin: 0px 10px 30px 10px;
-}
-.letras p {
-  font-size: 1.5rem;
+.letras h1{
+    font-size:45px;
+    color:white;
+    margin-bottom:20px;
+    line-height:1.2;
+    font-weight: 450;
 
+}
+
+.letras p{
+    font-size:24px;
+    color:white;
+    line-height:1.5;
+}
+
+.vantagens{
+    width:240px;
+    padding-left:35px;
+    border-left:2px solid rgba(255,255,255,.35);
+}
+.vantagens li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-size:20px;
+    line-height:1.5;
+    margin-bottom:22px;
 }
 
 .beneficios {
@@ -326,6 +346,11 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
+.beneficios ul{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
 .beneficios img {
   align-items: center;
   padding: 5px;
@@ -697,55 +722,139 @@
   }
 }
 
-.planos {
-  padding: 60px 0;
+/*parte dos planos do conecta*/
+.planos{
+  width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 0%,
+        #F8F6FF 40%,
+        #F3F0FF 60%,
+        #FFFFFF 100%
+    );
+}
+.planos::before{
+
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#8B5CF6;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.18;
+    top:-80px;
+    left:-100px;
 }
 
+.planos::after{
+
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#6C63FF;
+    border-radius:50%;
+    filter:blur(130px);
+    opacity:.15;
+    bottom:-80px;
+    right:-100px;
+
+}
 .planos .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
 }
 
 .planos h2 {
-  font-size: 48px;
-  color: #6c63ff;
-  margin-bottom: 40px;
+    font-size: 48px;
+    color: #6C63FF;
+    margin-bottom: 45px;
+}
+.background-conexao{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:.18;
+    pointer-events:none;
+
 }
 
 .cards-planos {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
+    position: relative;
+    width: 500px;
+    height: 360px;
+    margin: auto;
+}
+.container{
+    position:relative;
+    z-index:2;
+
 }
 
-.card-plano,
-.cartao {
-  width: 320px;
-  min-height: 330px;
-  background: linear-gradient(180deg, #8e8cff, #6c63ff);
-  border-radius: 20px;
-  padding: 30px;
-  box-sizing: border-box;
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.card-plano{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,#8E8CFF,#6C63FF);
+    border-radius:25px;
+    padding:40px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    opacity:0;
+    transform:
+        translateY(20px)
+        scale(.95)
+        rotate(-2deg);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 }
 
-.card-plano h3,
-.cartao h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
+.card-plano.ativo{
+    opacity:1;
+    transform:
+        translateY(0)
+        scale(1)
+        rotate(0deg);
+    z-index:2;
 }
 
-.card-plano p,
-.cartao p {
-  font-size: 20px;
-  line-height: 1.6;
+.card-plano h3{
+    font-size:34px;
 }
 
+.card-plano p{
+    font-size:20px;
+    line-height:1.7;
+}
+
+.btn-empresa{
+    margin-top:auto;
+    background:white;
+    color:#6C63FF;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-empresa:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/*icones dos parceiros, section parceiros*/
 .parceiros {
   padding: 60px 0;
 }
