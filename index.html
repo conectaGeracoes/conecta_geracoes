@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/base/global.css">
     <link rel="stylesheet" href="./components/header.css">
+    <link rel="stylesheet" href="./css/chatbot.css">
 
     <title>Conecta gerações</title>
 </head>
@@ -32,32 +33,47 @@
     </div>
 </section>
 
+<!--==== SECTION OFERECEMOS ======-->
+
 <section class="oferecemos">
-    <h2>O que oferecemos</h2>
+
+    <h2>O que <span>oferecemos</span></h2>
+    <p class="subtitulo">
+        Conheça os principais assuntos que ensinamos<br>
+        para facilitar sua vida no dia a dia
+    </p>
 
     <div class="cards">
-        <div class="card whatsapp">
-            <img src="./assets/img/whatsapp.png" alt="WhatsApp">
+        <div class="item-1">
+            <div class="icone-container whatsapp">
+                <img src="./assets/img/whatsapp.png" alt="WhatsApp">
+            </div>
             <h3>WhatsApp</h3>
-            <p>Envie mensagens, áudios, fotos e muitos mais.</p>
+            <p>Acesse GOV, INSS e outros serviços.</p>
         </div>
 
-        <div class="card seguranca">
-            <img src="./assets/img/Group_7-removebg-preview.png" alt="Segurança Digital" >
+        <div class="item-1">
+            <div class="icone-container seguranca">
+                <img src="./assets/img/Group_7-removebg-preview.png" alt="Segurança">
+            </div>
             <h3>Segurança Digital</h3>
-            <p>Aprenda a identificar golpes e se proteger na internet.</p>
+            <p>Acesse GOV, INSS e outros serviços.</p>
         </div>
 
-        <div class="card servicos">
-            <img src="./assets/img/serviços.png" alt="Serviços Públicos" >
+        <div class="item-1">
+            <div class="icone-container servicos">
+                <img src="./assets/img/serviços.png" alt="Serviços">
+            </div>
             <h3>Serviços Públicos</h3>
             <p>Acesse GOV, INSS e outros serviços.</p>
         </div>
 
-        <div class="card transporte">
-            <img src="./assets/img/transporte.png" alt="Transporte" >
+        <div class="item-1 ultimo">
+            <div class="icone-container transporte">
+                <img src="./assets/img/transporte.png" alt="Transporte">
+            </div>
             <h3>Transporte e Mobilidade</h3>
-            <p>Use aplicativos de transporte e mapas com facilidade.</p>
+            <p>Acesse GOV, INSS e outros serviços.</p>
         </div>
     </div>
 </section>
@@ -155,23 +171,31 @@
         <h3>Aproximando histórias e conectando gerações</h3>
     </div>
     <div class="sobre-imagem">
-        <img src="./assets/img/0407d9e7-f592-42f8-a8c9-6b8e3b52fa80 1.png" alt="Celular">
+        <img src="./assets/img/celular-sobre.png" alt="Celular">
     </div>
 </section>
 
 <section class="planos">
-    <svg class="background-conexao"></svg>
-    <div class="container">
-        <h2>Nossos Planos</h2>
+    <!-- Ramos decorativos de fundo -->
+    <img src="./assets/img/flor 1.png" alt="" class="decoracao ramo-topo-direito">
+    <img src="./assets/img/flor 3.png" alt="" class="decoracao ramo-bottom-esquerdo">
+
+    <div class="container-planos">
+        <h2 class="h2">Nossos Planos</h2>
+        
         <div class="cards-planos">
             <div class="card-plano ativo">
                 <h3>Conecta Digital</h3>
                 <p>
-                    Acesso gratuito a todos os tutoriais,
+                    Acesso <strong>gratuito</strong> a todos os tutoriais,
                     guias, dicas de segurança digital,
                     chatbot e conteúdos educativos.
                 </p>
             </div>
+
+            <!-- Ramo decorativo entre os cards -->
+            <img src="./assets/img/flor 2.png" alt="" class="decoracao ramo-centro">
+
             <div class="card-plano">
                 <h3>Conecta Empresa</h3>
                 <p>
@@ -198,51 +222,60 @@
 
 <div class="logos">
 
-    <a href="https://verifica-ai-plataforma.vercel.app/">
+    <a href="https://verifica-ai-plataforma.vercel.app/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/Verifica AI.png" alt="Verifica AI">
         <p>Verifica AÍ </p>
     </div>
     </a>
-
+    <a href="https://meu.inss.gov.br/#/login" target="_blank">
     <div class="logoa">
         <img src="./assets/img/inss-logo.png" alt="Meu INSS">
         <p> Meu INSS</p>
     </div>
-
+    </a>
+    <a href="https://www.gov.br/pt-br" target="_blank">
     <div class="logoa">
         <img src="./assets/img/govbr 2.png" alt="Gov.br">
         <p> Gov.br</p>
     </div>
-
+</a>
+<a href="https://web.whatsapp.com/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/whatsApp.png" alt="WhatsApp">
         <p> WhatsApp</p>
     </div>
+    </a>
 
+<a href="https://www.uber.com/br/pt-br/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/simple-icons_uber.png" alt="Uber">
         <p> Uber</p>
     </div>
+    </a>
 
+    <a href="https://99app.com/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/download 1.png" alt="99">
         <p> 99</p>
     </div>
+</a>
 
-
+<a href="https://www.proa.org.br/" target="_blank">
     <div class="logoa">
-        <img src="./assets/img/download 2.png" alt="Instituto Pessoa">
+        <img src="./assets/img/download 2.png" alt="Instituto Proa">
         <p> Instituto Proa</p>
     </div>
+</a>
 
+<a href="https://www.serasaexperian.com.br/" target="_blank" >
     <div class="logoa">
         <img src="./assets/img/download 3.png" alt="Serasa">
         <p> Serasa
             Experian
         </p>
     </div>
-
+</a>
 </div>
 
 </div>
@@ -256,34 +289,28 @@
 </div>
 
 <footer id="footer">
-
     <div class="footer-container">
-
         <img
             src="./assets/img/logo footer.png"
             alt="Conecta Gerações"
             class="logo-footer"
         >
-
         <h3 class="footer-tagline">Aproximando histórias e conectando gerações</h3>
-
         <hr>
-
         <div class="footer-links">
             <a href="#">SAC</a>
             <a href="#">Central de Políticas</a>
         </div>
-
-        <hr>
-
         <p class="footer-copy">
             © 2026 Conecta Gerações. Todos os direitos reservados.
         </p>
-
     </div>
 
 </footer>
+<div id="chatbot-container"></div>
+
 <script src="./js/loadComponents.js"></script>
 <script src="./js/home.js"></script>
+<script src="./js/chatbot.js"></script>
 </body>
 </html>
