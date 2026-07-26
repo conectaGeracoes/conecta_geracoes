@@ -110,7 +110,7 @@ body {
 }
 
 .btn-prev {
-  transform: rotate(180deg); /* Seta virada para a esquerda */
+  transform: rotate(180deg);
 }
 
 /* --- Coluna do Meio (Seta) --- */
@@ -118,7 +118,9 @@ body {
   flex: 0.3;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  align-self: flex-end;
+  padding-bottom: 20px;
 }
 
 .arrow-placeholder {
@@ -126,92 +128,53 @@ body {
   height: 70px;
 }
 
-/* --- Coluna Direita (WhatsApp Mockup) --- */
+/* --- Coluna Direita (Tela de Conversa do WhatsApp) --- */
 .right-column {
   flex: 1.2;
 }
 
 .phone-mockup {
-  background-color: #ffffff;
+  background-color: #efeae2;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
 }
 
-/* Cabeçalho do WhatsApp */
-.whatsapp-header {
+/* Cabeçalho do Chat */
+.chat-header {
   background-color: #005d4b;
   color: #ffffff;
-  padding: 16px 16px 8px 16px;
-}
-
-.header-top {
+  padding: 12px 14px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  justify-content: space-between;
 }
 
-.app-title {
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-arrow {
   font-size: 18px;
-  font-weight: 600;
-}
-
-.header-icons .icon {
-  margin-left: 14px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.header-tabs {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #b0d4ce;
-  padding-bottom: 4px;
-}
-
-.header-tabs .tab.active {
-  color: #ffffff;
   font-weight: bold;
-  border-bottom: 3px solid #ffffff;
-  padding-bottom: 4px;
-}
-
-/* Lista de Conversas */
-.chat-list {
-  background-color: #ffffff;
-  padding: 8px 10px;
-}
-
-.chat-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #f0f0f0;
-  border-radius: 12px;
-  margin-bottom: 4px;
-}
-
-/* Item Selecionado (Destaque Roxo para Maria) */
-.chat-item.selected {
-  background-color: #f1edfd;
-  border: 2px solid #6139cc;
 }
 
 .avatar-placeholder {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: #e0e0e0;
+  background-color: #8b0000; /* Tom de vinho escuro conforme imagem */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9px;
-  color: #6139cc;
-  text-align: center;
-  margin-right: 12px;
+  font-size: 8px;
+  color: #ffffff;
   flex-shrink: 0;
 }
 
@@ -219,36 +182,104 @@ body {
   border-radius: 50%;
 }
 
-.chat-info {
-  flex: 1;
-}
-
-.chat-header {
+.contact-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2px;
+  flex-direction: column;
 }
 
 .contact-name {
-  font-size: 14px;
-  font-weight: 700;
-  color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.1;
 }
 
-.chat-time {
+.contact-status {
   font-size: 11px;
-  color: #888;
+  color: #b0d4ce;
 }
 
-.chat-time.highlight {
-  color: #008a72;
-  font-weight: 600;
+.header-icons .icon {
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.last-message {
-  font-size: 12px;
+/* Área de Conversa (Chat) */
+.chat-body {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  background-color: #e5ddd5;
+  background-image: radial-gradient(#d3c6b8 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.wallpaper-indicator {
+  position: absolute;
+  top: 40%;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 11px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.date-badge {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-size: 11px;
   color: #666;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé / Input de Digitação */
+.chat-footer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+}
+
+/* Destaque em volta do campo de texto (Caixa Vermelha) */
+.input-highlight-box {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #b81414; /* Borda vermelha em destaque */
+  border-radius: 20px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emoji-icon {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.placeholder-text {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Botão Enviar Mensagem */
+.btn-send {
+  width: 38px;
+  height: 38px;
+  background-color: #005d4b;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* Estilo Geral das Marcações de Imagem */
@@ -258,6 +289,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #6139cc;
   font-weight: bold;
   font-size: 12px;
   padding: 6px;
