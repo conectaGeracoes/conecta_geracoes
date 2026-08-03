@@ -9,4 +9,38 @@ body{
     background: linear-gradient(180deg, #FFFFFF,#F7F5FF,#FFFFFF);
 }
 
+/* Funciona em Chrome, Edge, Opera e Safari */
+/*barra de scroll lateral*/
+/* Chrome, Edge e Safari */
+::-webkit-scrollbar{
+    width:10px;
+}
 
+::-webkit-scrollbar-track{
+    background:#F5F3FF;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(
+        180deg,
+        #9B8CFF,
+        #6C63FF
+    );
+    border-radius:50px;
+    border:2px solid #F5F3FF;
+    transition:.3s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(
+        180deg,
+        #7D70FF,
+        #554EE8
+    );
+}
+
+/* Firefox */
+html{
+    scrollbar-width:auto;
+    scrollbar-color:#8577B4 #F5F3FF;
+}
