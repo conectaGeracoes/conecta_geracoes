@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/base/global.css">
     <link rel="stylesheet" href="./components/header.css">
-    <link rel="stylesheet" href="./css/chatbot.css">
+    <link rel="stylesheet" href="./components/footer.css">
 
     <title>Conecta gerações</title>
 </head>
@@ -16,11 +16,8 @@
     <div id="header"></div>
 
 <section class="hero">
-  <div class="texto">
+  <div class="texto" id="typing">
     <h1>Bem-vindo ao<br>Conecta Gerações</h1>
-    <div class="pesquisa">
-    <input type="text" placeholder="Qual é a sua dúvida?">
-    </div>
   </div>
 
     <div class="imagem">
@@ -143,6 +140,7 @@
             <h3>Como utilizar serviços públicos</h3>
             <div class="tags">
                 <img src="./assets/img/gov.png" alt="Gov.br">
+                <img src="./assets/img/inss.png" alt="Inss">
             </div>
         </div>
         <img class="seta" src="./assets/img/weui_arrow-filled.png" alt="Abrir">
@@ -219,7 +217,7 @@
 
     <hr>
 
-    <h2> Nossos Parceiros</h2>
+    <h2> Nossos Parceiros & Apoiadores</h2>
 
 <div class="logos">
 
@@ -229,38 +227,44 @@
         <p>Verifica AÍ </p>
     </div>
     </a>
-    <a href="https://meu.inss.gov.br/#/login" target="_blank">
+        <a href="" target="_blank">
+    <div class="logoa">
+        <img src="./assets/img/conectandogeracoes.png" alt="conectando gerações">
+        <p> Conectando Gerações</p>
+    </div>
+    </a> 
+    <!-- <a href="https://meu.inss.gov.br/#/login" target="_blank">
     <div class="logoa">
         <img src="./assets/img/inss-logo.png" alt="Meu INSS">
         <p> Meu INSS</p>
     </div>
-    </a>
-    <a href="https://www.gov.br/pt-br" target="_blank">
+    </a> -->
+    <!-- <a href="https://www.gov.br/pt-br" target="_blank">
     <div class="logoa">
         <img src="./assets/img/govbr 2.png" alt="Gov.br">
         <p> Gov.br</p>
     </div>
-</a>
-<a href="https://web.whatsapp.com/" target="_blank">
+</a> -->
+<!-- <a href="https://web.whatsapp.com/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/whatsApp.png" alt="WhatsApp">
         <p> WhatsApp</p>
     </div>
-    </a>
+    </a> -->
 
-<a href="https://www.uber.com/br/pt-br/" target="_blank">
+<!-- <a href="https://www.uber.com/br/pt-br/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/simple-icons_uber.png" alt="Uber">
         <p> Uber</p>
     </div>
-    </a>
+    </a> -->
 
-    <a href="https://99app.com/" target="_blank">
+    <!-- <a href="https://99app.com/" target="_blank">
     <div class="logoa">
         <img src="./assets/img/download 1.png" alt="99">
         <p> 99</p>
     </div>
-</a>
+</a> -->
 
 <a href="https://www.proa.org.br/" target="_blank">
     <div class="logoa">
@@ -284,34 +288,9 @@
 </section>
 
 
-<!-- Onda -->
-<div class="onda-footer">
-    <img src="./assets/img/onda-footer.svg" alt="">
-</div>
-
-<footer id="footer">
-    <div class="footer-container">
-        <img
-            src="./assets/img/logo footer.png"
-            alt="Conecta Gerações"
-            class="logo-footer"
-        >
-        <h3 class="footer-tagline">Aproximando histórias e conectando gerações</h3>
-        <hr>
-        <div class="footer-links">
-            <a href="#">SAC</a>
-            <a href="#">Central de Políticas</a>
-        </div>
-        <p class="footer-copy">
-            © 2026 Conecta Gerações. Todos os direitos reservados.
-        </p>
-    </div>
-
-</footer>
-<div id="chatbot-container"></div>
+<div id="footer"></div>
 
 <script src="./js/loadComponents.js"></script>
 <script src="./js/home.js"></script>
-<script src="./js/chatbot.js"></script>
 </body>
 </html>

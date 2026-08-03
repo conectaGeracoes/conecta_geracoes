@@ -1,17 +1,60 @@
 <header class="header">
-  <section class="container-header">
-      <div class="img">
-        <a href="#">
-          <img src="/assets/img/logo Conecta Gerações.png" alt="logo"/>
-        </a>
-    </div>
-        <div class="navbar">
-        <nav>
-              <a href="/index.html"><button >Início</button></a>
-              <a href="/index.html#tutoriais"><button>Passo a passo</button></a>
-              <a href="#"><button >Segurança Digital </button></a>
-              <a href="/index.html#footer"><button>Parcerias</button></a>
-        </nav>
+
+    <section class="container-header">
+
+        <!-- Logo -->
+        <div class="img">
+            <a href="/index.html">
+                <img src="/assets/img/logo Conecta Gerações.png" alt="Logo Conecta Gerações">
+            </a>
         </div>
-  </section>
+
+        <!-- Menu Desktop -->
+        <div class="navbar">
+
+            <nav>
+                <a href="/index.html">
+                    <button>Início</button>
+                </a>
+                <a href="/index.html#tutoriais">
+                    <button>Passo a passo</button>
+                </a>
+                <a href="#">
+                    <button>Segurança Digital</button>
+                </a>
+                <a href="/index.html#footer">
+                    <button>Parcerias</button>
+                </a>
+            </nav>
+        </div>
+        <!-- Botão Hambúrguer -->
+        <button id="abrirMenu" class="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+    </section>
 </header>
+
+<!-- Fundo escurecido -->
+<div id="overlay"></div>
+
+<!-- Menu Mobile -->
+<aside class="menu-mobile" id="menuMobile">
+    <div class="topo-menu">
+        <h2>Menu</h2>
+        <button id="fecharMenu" aria-label="Fechar menu">
+            ✕
+        </button>
+    </div>
+
+    <nav>
+        <a href="/index.html">Início</a>
+        <a href="/index.html#tutoriais">Passo a passo</a>
+        <a href="#">Segurança Digital</a>
+        <a href="/index.html#footer">Parcerias</a>
+        <a href="/pages/politicas.html">Políticas</a>
+    </nav>
+
+</aside>
+
+<script src="../js/loadComponents.js"></script>
+<script src="../js/menu.js"></script>
