@@ -1,0 +1,250 @@
+@import url("../base/global.css");
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.formulario-contato {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+    margin: 40px auto 50px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* Campo ocupando toda a largura */
+
+.campo-full {
+    grid-column: 1 / -1;
+}
+
+
+/* Nome e empresa ocupando toda a largura */
+
+.campo:nth-child(1),
+.campo:nth-child(2),
+.campo-mensagem {
+    grid-column: 1 / -1;
+}
+
+
+/* LABEL */
+
+.campo label {
+    font-size: 1.3rem;
+    color: #6a4cd9;
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+
+/* INPUTS E TEXTAREA */
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #eee9ff;
+    border: 1px solid #a990f4;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    color: #4f4f4f;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9887d0;
+    opacity: 1;
+}
+
+
+/* QUANDO O CAMPO ESTÁ SELECIONADO */
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #6c3ef4;
+    background-color: #f3efff;
+    box-shadow: 0 0 0 2px rgba(108, 62, 244, 0.10);
+}
+
+
+/* TEXTAREA */
+
+.campo textarea {
+    min-height: 85px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+
+/* BOTÃO */
+
+.btn-enviar {
+    grid-column: 1 / -1;
+    width: 100%;
+    background-color: #6341d1;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 15px;
+    margin-top: 3px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* HOVER*/
+
+.btn-enviar:hover {
+    background-color: #5432bf;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(99, 65, 209, 0.20);
+}
+
+
+/* CLIQUE */
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+
+/* ENVIANDO */
+.btn-enviar:disabled {
+    background-color: #a291e9;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* RESPONSIVIDADE*/
+
+@media (max-width: 650px) {
+
+    .formulario-contato {
+        grid-template-columns: 1fr;
+        gap: 13px;
+        margin: 30px auto 40px;
+        padding: 0 20px;
+    }
+
+    .campo:nth-child(1),
+    .campo:nth-child(2),
+    .campo-mensagem,
+    .btn-enviar {
+        grid-column: 1;
+    }
+
+    .campo label {
+        font-size: 0.75rem;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 0.8rem;
+
+        padding: 11px 12px;
+    }
+
+    .btn-enviar {
+        font-size: 0.82rem;
+
+        padding: 12px;
+    }
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+
+@media (max-width: 768px) {
+    #formConectaEmpresas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD INTRODUÇÃO */
+
+.card-introducao{
+    background:#FFFFFF;
+    border-radius:8px;
+    padding:30px;
+    margin-bottom:45px;
+    box-shadow:0 4px 15px rgba(0,0,0,.4);
+    margin:  0px 100px 50px 100px;
+}
+
+.card-introducao h2{
+    font-size:18px;
+    font-weight:600;
+    color:#2D2D2D;
+    margin-bottom:20px;
+}
+
+.card-introducao p{
+    font-size:16px;
+    color:#444;
+    line-height:1.8;
+    margin-bottom:12px;
+}
+
+.card-introducao p:last-child{
+    margin-bottom:0;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .formulario-contato {
+        grid-template-columns: 1fr;
+        gap: 13px;
+        margin-top: 25px;
+    }
+
+    .campo:nth-child(1),
+    .campo:nth-child(2),
+    .campo-mensagem,
+    .btn-enviar {
+        grid-column: 1;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 12px;
+        padding: 11px 12px;
+    }
+
+    .campo label {
+        font-size: 11px;
+    }
+
+    .btn-enviar {
+        height: 42px;
+        font-size: 12px;
+    }
+}

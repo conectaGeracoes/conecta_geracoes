@@ -1,23 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/assets/img/Meu cantinho de Receitas(2).png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/base/global.css">
-  <link rel="stylesheet" href="../../components/header.css">
-  <link rel="stylesheet" href="../../components/footer.css">
-  <title>Plano Empresa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Empresas</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/Meu cantinho de Receitas(2).png">
+    <link rel="stylesheet" href="../../css/nossosPlanos/nossosPlanos.css">
+    <link rel="stylesheet" href="/base/global.css">
+    <link rel="stylesheet" href="/components/footer.css">
+    <link rel="stylesheet" href="/components/header.css">
 </head>
+
 <body>
-  <main>
+
+    <!-- Header -->
     <div id="header"></div>
 
-    
+    <main>
+      
+        <!-- Card Informativo -->
+        <section class="card-introducao">
+            <h2>
+                Quer fazer parte do Conecta Gerações?
+            </h2>
+            <p>
+                Se sua empresa deseja apoiar, colaborar ou estabelecer uma parceria com o Conecta Gerações, estamos abertos para conversar!
+            </p>
+            <p>
+                Preencha o formulário ao lado com seus dados e conte um pouco sobre como podemos trabalhar juntos. Nossa equipe entrará em contato para conhecer sua proposta e entender como sua empresa pode contribuir para ampliar a inclusão e a autonomia digital da população idosa. <br>
+                <strong>Vamos conectar ideias e transformar possibilidades em impacto!</strong>
+            </p>
+        </section>
 
+<section>
+<!-- Formulário -->
+    <form id="formConectaEmpresas" class="formulario-contato">
+      <input type="hidden" name="access_key" value="2f99d396-dcfb-4805-bea0-c60b04fc327d">
+
+      <div class="campo campo-full">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome do Responsável" required>
+      </div>
+            <div class="campo campo-full">
+        <label for="nome">Empresa</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome da empresa" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seuEmailCorporativo@email.com" required>
+      </div>
+
+      <div class="campo">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(99) 12345-6789" required>
+      </div>
+
+      <div class="campo campo-full">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Conte-nos sobre sua proposta..." rows="4" required></textarea>
+      </div>
+
+      <button type="submit" id="btnEnviar" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+
+</section>
+
+    </main>
+
+    <!-- Footer -->
     <div id="footer"></div>
-  </main>
 
-  <script src="../../js/loadComponents.js"></script>
+    <!-- Componentes -->
+    <script src="../../js/loadComponents.js"></script>
+    <script src="../../js/formularioNossosPlanos.js"></script>
 </body>
 </html>

@@ -1,0 +1,194 @@
+@import url("../base/global.css");
+
+
+/* PÁGINA*/
+
+.pagina-sucesso {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #f4f0ff,
+            #ffffff
+        );
+}
+
+
+/* CARD */
+
+.card-sucesso {
+    width: 100%;
+    max-width: 500px;
+    padding: 45px 40px 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:
+        0 10px 35px rgba(79, 52, 145, 0.15);
+    animation: aparecer 0.6s ease;
+}
+
+
+/* LOGO*/
+
+.logo img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* ÍCONE*/
+
+.icone-sucesso {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e7ddff;
+    color: #6c3ef4;
+    font-size: 36px;
+    font-weight: 600;
+    animation: aparecerIcone 0.7s ease;
+}
+
+
+/* TÍTULO */
+
+.conteudo-sucesso h1 {
+    margin-bottom: 15px;
+    color: #5c38c9;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* TEXTOS */
+
+.conteudo-sucesso p {
+    max-width: 390px;
+    margin: 0 auto 12px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* BOTÃO*/
+
+.btn-voltar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 220px;
+    margin-top: 18px;
+    padding: 12px 25px;
+    border-radius: 6px;
+    background-color: #6c3ef4;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-voltar:hover {
+    background-color: #5630ca;
+    transform: translateY(-2px);
+    box-shadow:
+        0 6px 15px rgba(108, 62, 244, 0.25);
+}
+
+
+/* FRASE FINAL */
+
+.frase-final {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e6defa;
+    color: #8a70c9;
+    font-size: 11px;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes aparecerIcone {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .pagina-sucesso {
+        padding: 20px 15px;
+    }
+
+    .card-sucesso {
+        padding: 35px 25px 30px;
+
+        border-radius: 16px;
+    }
+
+    .logo img {
+        width: 95px;
+    }
+
+    .icone-sucesso {
+        width: 60px;
+        height: 60px;
+
+        font-size: 30px;
+    }
+
+    .conteudo-sucesso h1 {
+        font-size: 22px;
+    }
+
+    .conteudo-sucesso p {
+        font-size: 13px;
+    }
+
+    .btn-voltar {
+        width: 100%;
+    }
+
+}
