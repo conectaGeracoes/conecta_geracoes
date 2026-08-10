@@ -194,7 +194,8 @@
     padding:30px;
     margin-bottom:45px;
     box-shadow:0 4px 15px rgba(0,0,0,.4);
-    margin:  0px 100px 50px 100px;
+    margin:  0px auto;
+    max-width: 1200px;
 }
 
 .card-introducao h2{
