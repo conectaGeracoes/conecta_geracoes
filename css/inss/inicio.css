@@ -14,7 +14,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--fundo);
+  background:#fff;
   color: var(--texto);
   padding: 20px;
   overflow-x: hidden;

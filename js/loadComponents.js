@@ -10,13 +10,13 @@ fetch("/components/header.html")
     document.addEventListener("DOMContentLoaded", () => {
     const footer = document.getElementById("footer");
     if (!footer) return;
-    let caminho = "../components/footer.html";
+    let caminho = "/components/footer.html";
     if (
         window.location.pathname.endsWith("index.html") ||
         window.location.pathname === "/" ||
         window.location.pathname.endsWith("/conecta_geracoes/")
     ) {
-        caminho = "./components/footer.html";
+        caminho = "/components/footer.html";
     }
 
     fetch(caminho)
