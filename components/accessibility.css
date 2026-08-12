@@ -1,0 +1,251 @@
+/* ===== Widget de Acessibilidade — Conecta Gerações ===== */
+:root{
+    --a11y-roxo: var(--roxo, #6040CE);
+    --a11y-roxo-escuro: #4b2fa8;
+    --a11y-branco: var(--branco, #FFFFFF);
+    --a11y-preto: var(--preto, #000000);
+    --a11y-cinza: var(--cinza, #F5F5F5);
+}
+
+#a11y-widget{
+    position: fixed;
+    z-index: 1200;
+    bottom: 16px;
+    right: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Botão flutuante circular */
+.a11y-fab{
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    border: none;
+    background: var(--a11y-roxo);
+    color: var(--a11y-branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    transition: transform .25s ease, background .25s ease;
+}
+
+.a11y-fab-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.a11y-fab:hover{
+    background: var(--a11y-roxo-escuro);
+    transform: scale(1.08);
+}
+
+.a11y-fab:focus-visible,
+.a11y-close:focus-visible,
+.a11y-option:focus-visible,
+.a11y-btn-row button:focus-visible{
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
+}
+
+/* Painel/modal de opções */
+.a11y-panel{
+    position: fixed;
+    bottom: 78px;
+    right: 16px;
+    width: min(92vw, 300px);
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--a11y-branco);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.25);
+    border: 1px solid #ECECEC;
+}
+
+.a11y-panel[hidden]{
+    display: none;
+}
+
+.a11y-panel-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border-bottom: 1px solid #ECECEC;
+    position: sticky;
+    top: 0;
+    background: var(--a11y-branco);
+    border-radius: 16px 16px 0 0;
+}
+
+.a11y-panel-header h2{
+    font-size: 1.1rem;
+    color: var(--a11y-roxo);
+    margin: 0;
+}
+
+.a11y-close{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--a11y-preto);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.a11y-close:hover{
+    background: var(--a11y-cinza);
+}
+
+.a11y-panel-body{
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.a11y-group-label{
+    display: block;
+    font-size: .95rem;
+    font-weight: bold;
+    color: var(--a11y-preto);
+    margin-bottom: 8px;
+}
+
+.a11y-btn-row{
+    display: flex;
+    gap: 8px;
+}
+
+.a11y-btn-row button{
+    flex: 1;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: var(--a11y-cinza);
+    color: var(--a11y-roxo);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.a11y-btn-row button:hover{
+    background: var(--a11y-roxo);
+    color: var(--a11y-branco);
+}
+
+.a11y-option{
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: var(--a11y-branco);
+    color: var(--a11y-preto);
+    font-size: .95rem;
+    text-align: left;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.a11y-option:hover{
+    background: var(--a11y-cinza);
+}
+
+.a11y-option[aria-pressed="true"]{
+    background: var(--a11y-roxo);
+    border-color: var(--a11y-roxo);
+    color: var(--a11y-branco);
+}
+
+.a11y-option-reset{
+    justify-content: center;
+    font-weight: bold;
+    color: var(--a11y-roxo);
+    border-color: var(--a11y-roxo);
+}
+
+.a11y-option-reset:hover{
+    background: var(--a11y-roxo);
+    color: var(--a11y-branco);
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 769px){
+    #a11y-widget{
+        bottom: 24px;
+        right: 24px;
+    }
+    .a11y-fab{
+        width: 58px;
+        height: 58px;
+    }
+    .a11y-fab-icon{
+        width: 58px;
+        height: 58px;
+    }
+    .a11y-panel{
+        bottom: 90px;
+        right: 24px;
+        width: 320px;
+    }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 993px){
+    #a11y-widget{
+        bottom: 32px;
+        right: 32px;
+    }
+    .a11y-fab{
+        width: 62px;
+        height: 62px;
+    }
+    .a11y-panel{
+        bottom: 100px;
+        right: 32px;
+        width: 340px;
+    }
+}
+
+/* ===== Estados globais aplicados ao <html> pelo widget ===== */
+html.a11y-contrast-alto{
+    background: var(--a11y-preto) !important;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.a11y-contrast-alto img,
+html.a11y-contrast-alto svg,
+html.a11y-contrast-alto video{
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.a11y-fonte-legivel body,
+html.a11y-fonte-legivel button,
+html.a11y-fonte-legivel input,
+html.a11y-fonte-legivel textarea{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+html.a11y-espacamento body *{
+    line-height: 1.7 !important;
+    letter-spacing: .06em !important;
+    word-spacing: .12em !important;
+}
+
+html.a11y-links-destacados a{
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    background: #fff3b0 !important;
+    color: #1a1a1a !important;
+    border-radius: 3px;
+}

@@ -1,5 +1,5 @@
 //para carregar o header da página
-fetch("/components/header.html")
+fetch("../components/header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
@@ -43,13 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.getElementById("header");
     if (!header) return;
-    let caminho = "../components/header.html";
+    let caminho = "/components/header.html";
     if (
         window.location.pathname.endsWith("index.html") ||
         window.location.pathname === "/" ||
         window.location.pathname.endsWith("/conecta_geracoes/")
     ) {
-        caminho = "./components/header.html";
+        caminho = "/components/header.html";
     }
 
     fetch(caminho)
