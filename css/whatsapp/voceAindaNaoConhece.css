@@ -1,5 +1,11 @@
 @import url('../base/global.css');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   background-color: #ffffff;
@@ -8,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
+  padding: 24px;
 }
 
 .container {
@@ -19,63 +26,69 @@ body {
 
 .card {
   position: relative;
-  width: 93%;
-  max-width: 665px;
-  height: 425px;
+  width: 100%;
+  max-width: 1200px;
+  height: clamp(480px, 50vw, 720px); /* Aumentado levemente para acomodar a imagem maior */
   background: #5d3dcc;
-  border-radius: 14px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 /* TÍTULO */
 h1 {
   position: absolute;
-  top: 49px;
+  top: clamp(28px, 4vw, 50px);
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 85%;
   text-align: center;
+  z-index: 2; /* Garante que o texto fique sempre acima da imagem */
 
-  color: white;
-  font-size: 21px;
+  color: #ffffff;
+  font-size: clamp(20px, 2.2vw, 34px);
   line-height: 1.45;
-  letter-spacing: 3px;
+  letter-spacing: clamp(1px, 0.2vw, 3px);
   font-weight: 700;
 }
 
 /* ÁREA DA SETA */
 .area-seta {
   position: absolute;
-  left: 58px;
-  top: 178px;
-  width: 110px;
-  height: 89px;
+  left: clamp(40px, 8%, 110px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(110px, 12vw, 170px);
+  height: clamp(90px, 10vw, 140px);
   background-color: #20c45d;
-  border-radius: 10px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
 /* IMAGEM DA SETA */
 .area-seta img {
-  width: 55px;
-  height: 55px;
+  width: clamp(55px, 6vw, 90px);
+  height: clamp(55px, 6vw, 90px);
   object-fit: contain;
 }
 
-/* ÁREA DA SENHORA */
+/* ÁREA DA SENHORA (CENTRALIZADA E MAIOR) */
 .area-senhora {
   position: absolute;
-  left: 235px;
-  bottom: 60px;
-  width: 300px;
-  height: 250px;
+  left: 50%;
+  transform: translateX(-50%); /* Centralizado */
+  bottom: clamp(15px, 3vw, 40px);
+  width: clamp(340px, 42vw, 620px);  /* Aumentado a largura máxima e mínima */
+  height: clamp(260px, 34vw, 480px); /* Aumentado a altura máxima e mínima */
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  z-index: 1;
 }
 
 /* IMAGEM DA SENHORA */
