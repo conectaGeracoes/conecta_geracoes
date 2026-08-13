@@ -1,0 +1,386 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+
+}
+
+/* ===========================
+   TELA
+=========================== */
+
+.tutorial{
+
+    width:1366px;
+    height:768px;
+
+    margin:auto;
+
+    position:relative;
+
+    background:#F6F6F6;
+
+}
+
+/* Card */
+
+.container{
+
+    position:absolute;
+
+    left:35px;
+    top:45px;
+
+    width:1295px;
+    height:675px;
+
+    background:#F9F9FC;
+
+    border-radius:22px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+
+}
+
+/* Fechar */
+
+.fechar{
+
+    position:absolute;
+
+    right:22px;
+    top:10px;
+
+    color:#444;
+
+    font-size:22px;
+
+}
+
+/* Logo */
+
+.logo{
+
+    position:absolute;
+
+    left:55px;
+    top:55px;
+
+}
+
+.logo img{
+
+    width:82px;
+
+}
+
+/* Conteúdo */
+
+.conteudo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:100%;
+
+    padding:60px 65px 60px 175px;
+
+}
+
+/* Texto */
+
+.texto{
+
+    width:470px;
+
+}
+
+.texto h1{
+
+    font-size:27px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    color:#111;
+
+    margin-bottom:5px;
+
+}
+
+.texto h2{
+
+    font-size:20px;
+
+    font-weight:400;
+
+    color:#444;
+
+    margin-bottom:40px;
+
+}
+
+.texto p{
+
+    font-size:18px;
+
+    color:#444;
+
+    line-height:30px;
+
+    margin-bottom:25px;
+
+}
+
+.texto strong{
+
+    color:#333;
+
+}
+
+.texto ul{
+
+    margin-left:22px;
+
+    font-size:18px;
+
+    color:#444;
+
+    margin-bottom:25px;
+
+}
+
+/* Seta */
+
+.seta{
+
+    font-size:75px;
+
+    color:#555;
+
+}
+
+/* Celular */
+
+.celular img{
+
+    width:270px;
+
+}
+
+/* Navegação */
+
+.botoes{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:70px;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.botao{
+
+    width:108px;
+
+    height:33px;
+
+    background:#6543D9;
+
+    border-radius:10px;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.botao:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   TELA FINAL
+========================== */
+
+
+.final{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.final-box{
+
+    width:650px;
+    height:365px;
+
+    background:#F9F9FC;
+
+    border-radius:22px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+
+.check{
+
+    width:110px;
+    height:110px;
+
+    background:#7040FF;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:25px;
+
+}
+
+
+.check i{
+
+    color:white;
+
+    font-size:65px;
+
+}
+
+
+
+.final-box h1{
+
+    font-size:28px;
+
+    letter-spacing:4px;
+
+    margin-bottom:8px;
+
+    color:#111;
+
+}
+
+
+
+.subtitulo{
+
+    font-size:17px;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.mensagem{
+
+
+    width:520px;
+
+    height:80px;
+
+    border:1px solid #8D6CFF;
+
+    background:#E9DDFB;
+
+    border-radius:6px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+
+}
+
+
+.estrela{
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    background:#9B7BFF;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.estrela i{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+
+
+.mensagem p{
+
+    font-size:20px;
+
+    color:#666;
+
+    text-align:center;
+
+    line-height:25px;
+
+}
