@@ -5,94 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/components/header.css">
-    <link rel="icon" type="image/x-icon" href="/assets/img/Meu cantinho de Receitas(2).png"/>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logoConectaPrincipal.png"/>
     <link rel="stylesheet" href="/css/base/global.css">
-    <link rel="stylesheet" href="../../css/segrancaDigital/segurancaDigital.css">
+    <link rel="stylesheet" href="../../css/segurancaDigital/segurancaDigital.css">
+    <link rel="stylesheet" href="../../components/pagina-base.css">
     <title>Segurança Digital</title>
 </head>
 
 <body>
 
     <!-- Página de Segurança Digital -->
-    <main class="pagina-seguranca">
-
-      <div id="header"></div>
-
+    
+    <div id="header"></div>
+    <!-- Carregando página base -->
+    <main id="pagina-base"></main>
 
         <!-- Conteúdo principal -->
-        <section class="card-seguranca">
-      <button class="btn-fechar" type="button" aria-label="Fechar página"> × </button>
-            <!-- Conteúdo textual -->
-            <div class="conteudo-seguranca">
+<template id="conteudo-pagina-template">
 
-                <h1>Segurança<br>Digital</h1>
-                <span class="linha-titulo"></span>
-                <p> Vamos evitar golpes? Aqui temos uma série de passo a passo para te ajudara identificar possíveis golpes.</p>
+    <div class="wrapper-seguranca-digital">
+        <div class="conteudo-seguranca">
+                    <h1>Segurança<br>Digital</h1>
+                    <span class="linha-titulo"></span>
+                    <p> Vamos evitar golpes? Aqui temos uma série de passo a passo para te ajudara identificar possíveis golpes.</p>
 
 
-                <!-- Benefícios -->
-                <div class="beneficios">
+                    <!-- Benefícios -->
+                    <div class="beneficios">
 
-                    <div class="beneficio">
-                        <div class="icone-beneficio">
-                            <img src="../../assets/img/img-seguranca/segurancaDigital1.png"alt="">
+                        <div class="beneficio">
+                            <div class="icone-beneficio">
+                                <img src="../../assets/img/img-seguranca/segurancaDigital1.png"alt="">
+                            </div>
+
+                            <span>Proteja seus dados pessoais </span>
                         </div>
 
-                        <span>Proteja seus dados pessoais </span>
-                    </div>
 
-
-                    <div class="beneficio">
-                        <div class="icone-beneficio">
-                            <img src="../../assets/img/img-seguranca/mensagemseguranca2.png" alt="">
+                        <div class="beneficio">
+                            <div class="icone-beneficio">
+                                <img src="../../assets/img/img-seguranca/mensagemseguranca2.png" alt="">
+                            </div>
+                            <span> Identifique golpes e fraudes</span>
                         </div>
-                        <span> Identifique golpes e fraudes</span>
+
+
+                        <div class="beneficio">
+                            <div class="icone-beneficio">
+                                <img src="../../assets/img/img-seguranca/segurancaimg3.png" alt=""></div>
+                            <span>Navegue com mais segurança</span>
+                        </div>
                     </div>
 
+                    <!-- Botão -->
+                    <a href="./tiposComunsDeGolpe.html"><button class="btn-iniciar" type="button">
+                        <span class="icone-play"> ▶</span>
+                        <span>Começar o passo a passo</span>
+                    </button></a> 
+                </div>
 
-                    <div class="beneficio">
-                        <div class="icone-beneficio">
-                            <img src="../../assets/img/img-seguranca/segurancaimg3.png" alt=""></div>
-                        <span>Navegue com mais segurança</span>
+
+                <!-- Área da ilustração -->
+                <div class="ilustracao-seguranca">
+
+                    <!-- Ilustração principal -->
+                    <img 
+                        class="imagem-seguranca"
+                        src="../../assets/img/img-seguranca/passo2-tela interativa.png"
+                        alt="Ilustração representando segurança digital"
+                    >
+
+                    <!-- Aviso: não compartilhe seus dados -->
+                    <div class="aviso aviso-dados">
+                        <img src="../../assets/img/img-seguranca/naocompartilhe.png" alt="">
+                    </div>
+
+                    <!-- Aviso: mensagens suspeitas -->
+                    <div class="aviso aviso-mensagens">
+                        <img src="../../assets/img/img-seguranca/cuidadoComMensagens.png" alt="">
+                    </div>
+
+                    <!-- Aviso: sites confiáveis -->
+                    <div class="aviso aviso-sites">
+                        <img src="../../assets/img/img-seguranca/navegueEmSitesconfiaveis.png" alt="">
                     </div>
                 </div>
+        </div>
+    </template>
 
-                <!-- Botão -->
-                <button class="btn-iniciar" type="button">
-                    <span class="icone-play"> ▶</span>
-                    <span>Começar o passo a passo</span>
-                </button>
-            </div>
-
-
-            <!-- Área da ilustração -->
-            <div class="ilustracao-seguranca">
-
-                <!-- Ilustração principal -->
-                <img 
-                    class="imagem-seguranca"
-                    src="../../assets/img/img-seguranca/passo2-tela interativa.png"
-                    alt="Ilustração representando segurança digital"
-                >
-
-                <!-- Aviso: não compartilhe seus dados -->
-                <div class="aviso aviso-dados">
-                    <img src="../../assets/img/img-seguranca/naocompartilhe.png" alt="">
-                </div>
-
-                <!-- Aviso: mensagens suspeitas -->
-                <div class="aviso aviso-mensagens">
-                    <img src="../../assets/img/img-seguranca/cuidadoComMensagens.png" alt="">
-                </div>
-
-                <!-- Aviso: sites confiáveis -->
-                <div class="aviso aviso-sites">
-                    <img src="../../assets/img/img-seguranca/navegueEmSitesconfiaveis.png" alt="">
-                </div>
-            </div>
-        </section>
-
-    </main>
     <script src="/js/loadComponents.js"></script>
 <script src="/js/accessibility.js" defer></script>
 </body>

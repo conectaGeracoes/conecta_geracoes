@@ -1,0 +1,140 @@
+:root {
+  --roxo-principal: #6040ce;
+  --roxo-escuro: #4d2fb7;
+  --fundo: #f5f6fa;
+  --texto: #1f2937;
+}
+
+
+.conteudo-topico {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titulo-container h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--texto);
+}
+
+.titulo-underline {
+  width: 60px;
+  height: 4px;
+  background: var(--roxo-principal);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.descricao-topico {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 480px;
+}
+
+.botao-comecar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 16px 26px;
+  background: var(--roxo-principal);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(96, 64, 206, 0.35);
+  transition: 0.25s ease;
+}
+
+.botao-comecar:hover {
+  background: var(--roxo-escuro);
+  transform: translateY(-2px);
+}
+
+.play-icon {
+  font-size: 0.85rem;
+}
+
+.imagem-topico {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+.circulo-decorativo {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 2px dashed var(--roxo-principal);
+  border-radius: 50%;
+  opacity: 0.4;
+  margin-left: auto;
+}
+
+.imagem-idosa {
+  position: relative;
+  width: 220px;
+  max-width: 80%;
+  z-index: 1;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 600px) {
+  .conteudo-topico {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .titulo-container h1 {
+    font-size: 2rem;
+  }
+
+  .descricao-topico {
+    font-size: 1.1rem;
+  }
+
+  .imagem-topico {
+    min-height: 300px;
+  }
+
+  .imagem-idosa {
+    width: 260px;
+  }
+
+  .circulo-decorativo {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 993px) {
+  .cartao-topico {
+    margin: 40px auto;
+  }
+
+  .conteudo-topico {
+    padding: 56px 60px;
+  }
+
+  .imagem-idosa {
+    width: 320px;
+  }
+
+  .circulo-decorativo {
+    width: 320px;
+    height: 320px;
+  }
+}

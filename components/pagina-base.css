@@ -1,0 +1,105 @@
+/* BASE DAS PÁGINAS */
+
+.pagina-base {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #ffffff;
+    padding: 0 14px 14px;
+    position: relative;
+}
+
+
+/* CARD PRINCIPAL*/
+
+.card-base {
+    width: 100%;
+    max-width: 1420px;
+    min-height: 400px;
+    margin: 0 auto;
+    background-color: #f5f6fa;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* INTEGRAÇÃO DE COMPONENTES (MÁGICA DO CSS) */
+
+#conteudo-pagina {
+    display: flex;
+    width: 100%;
+    position: relative;  
+
+}
+
+
+/* BOTÃO FECHAR */
+
+#link-fechar {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    z-index: 20;
+}
+
+.btn-fechar {
+    border: none;
+    background: transparent;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1;
+    color: #3b3b3b;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-fechar:hover {
+    transform: scale(1.08);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .pagina-base {
+        padding: 0 10px 10px;
+    }
+
+    .card-base {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 16px;
+    }
+
+    #link-fechar {
+        right: 12px;
+    }
+
+    .btn-fechar {
+        font-size: 36px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .pagina-base {
+        padding: 0 8px 8px;
+    }
+
+    .card-base {
+        border-radius: 14px;
+    }
+
+    #link-fechar {
+        right: 5px;
+        top: 5px;
+    }
+
+    .btn-fechar {
+        font-size: 32px;
+    }
+}

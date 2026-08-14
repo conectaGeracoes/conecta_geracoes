@@ -1,0 +1,77 @@
+@import url("/css/base/global.css");
+
+
+.conteudo-golpes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 35px;
+}
+
+/* LISTA */
+.lista-golpes{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    width: 100%;
+}
+/* TÍTULO */
+.titulo h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: #050505;
+    margin-bottom: 15px;
+    /* margin-top: 20px; */
+}
+
+
+/* Linha roxa abaixo do título */
+.linha-titulo {
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #673de6;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+/* CARD */
+
+.card-golpe{
+    background:#FFFFFF;
+    border-radius:18px;
+    padding:28px 35px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);
+    transition:.3s;
+    text-decoration: none;
+}
+
+.card-golpe:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
+
+.card-golpe img:not(.seta){
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.card-golpe span{
+    color:#3d3d3d;
+    font-size:1.4rem;
+    font-weight:600;
+    flex: 1; /* empurra a seta pro final */
+}
+
+.card-golpe .seta{
+    width: 14px;
+    height: auto;
+    flex-shrink: 0;
+}

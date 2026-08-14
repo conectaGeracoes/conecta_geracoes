@@ -1,72 +1,22 @@
 @import url("../base/global.css");
 
-/* pagina */
-.pagina-seguranca {
+
+/* WRAPPER PRINCIPAL */
+.wrapper-seguranca-digital {
     width: 100%;
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding: 0 14px 14px;
-    position: relative;
-}
-
-
-/* HEADER */
-
-.header-seguranca {
-    width: 100%;
-    height: 103px;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-}
-
-
-
-/* Botão fechar */
-.btn-fechar {
-    position: absolute;
-    top: 8px;
-    right: 18px;
-    border: none;
-    background: transparent;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 1;
-    color: #3b3b3b;
-    cursor: pointer;
-    z-index: 10;
-    transition: transform 0.2s ease;
-}
-
-.btn-fechar:hover {
-    transform: scale(1.08);
-}
-
-
-/* CARD PRINCIPAL */
-.card-seguranca {
-    width: 100%;
-    max-width: 1520px;
-    min-height: 750px;
-    margin: 0 auto;
-    background-color: #f5f6fa;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    display: flex;
-    overflow: hidden;
     position: relative;
 }
 
 
 /* CONTEÚDO ESQUERDO */
 .conteudo-seguranca {
-    width: 55%;
+    width: 50%;
     padding: 18px 0 40px 42px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    position: absolute;
     z-index: 2;
 }
 
@@ -95,7 +45,7 @@
 
 
 /* TEXTO */
-.conteudo-seguranca > p {
+.conteudo-seguranca  p {
     max-width: 570px;
     font-size: 2rem;
     line-height: 1.2;
@@ -161,6 +111,7 @@
     width: 500px;
     height: 100px;
     border: none;
+    margin: 40px 0;
     border-radius: 10px;
     background: linear-gradient(90deg, #6040CE, #6942d5);
     color: #ffffff;
@@ -204,6 +155,7 @@
     aspect-ratio: 4 / 5;
     position: relative;
     display: block;
+    margin-left: auto; 
     background-image: url("../../assets/img/img-seguranca/imgseguranca(2).png");
     background-repeat: no-repeat;
     background-position: center;

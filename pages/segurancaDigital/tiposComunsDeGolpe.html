@@ -5,54 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tipos Comuns de Golpes</title>
   <link rel="stylesheet" href="/css/base/global.css">
-  <link rel="icon" type="image/x-icon" href="/assets/img/Meu cantinho de Receitas(2).png"/>
+  <link rel="icon" type="image/x-icon" href="/assets/img/logoConectaPrincipal.png"/>
   <link rel="stylesheet" href="/components/header.css">
-  <link rel="stylesheet" href="/css/segrancaDigital/tiposComunsDeGolpes.css">
+  <link rel="stylesheet" href="/css/segurancaDigital/tiposComunsDeGolpes.css">
+  <link rel="stylesheet" href="../../components/pagina-base.css">
 </head>
 <body>
     <div id="header"></div>
 
-        <!-- Card Informativo -->
-        <section class="card-principal">
-      <button class="btn-fecha" type="button" aria-label="Fechar página"> × </button>
-            <!-- Conteúdo textual -->
-            <div class="conteudo">
-                <h1>Tipos comuns de golpe</h1>
-                <span class="linha-titulo"></span>
+    <main id="pagina-base"></main>
 
+<template id="conteudo-pagina-template">
+        <div class="conteudo-golpes">
+        <div class="titulo">
+            <h1>Tipos comuns de golpe</h1>
+            <span class="linha-titulo"></span>
+        </div>
+    <div class="lista-golpes">
 
-        <section class="lista-golpes">
-            <!-- tipos de golpes -->
+        <a href="./golpeWhats/inicio.html" class="card-golpe">
+            <img src="/assets/img/img-seguranca/WhatsApp(1).png" alt="">
+            <span>Golpe no WhatsApp</span>
+            <img class="seta" src="/assets/img/weui_arrow-filled.png" alt="Abrir">
+        </a>
 
-            <a href="#" class="golpe-whatsapp">
-                <img src="/assets/img/img-seguranca/WhatsApp(1).png" alt="">
-                <span>
-                    Golpe no WhatsApp
-                </span>
-                <img class="seta" src="/assets/img/weui_arrow-filled.png" alt="Abrir">
-            </a>
+        <a href="./inicio.html" class="card-golpe">
+            <img src="/assets/img/img-seguranca/Successful Delivery.png" alt="">
+            <span>Golpe da falsa entrega</span>
+            <img class="seta" src="../../assets/img/weui_arrow-filled.png" alt="Abrir">
+        </a>
 
+        <a href="./PromocoesFalsas/promocoesFalsas.html" class="card-golpe">
+            <img src="/assets/img/img-seguranca/Discount.png" alt="">
+            <span>Promoções falsas</span>
+            <img class="seta" src="../../assets/img/weui_arrow-filled.png" alt="Abrir">
+        </a>
 
-            <a href="#" class="golpe-entrega">
-                <img src="/assets/img/img-seguranca/Successful Delivery.png" alt="">
-                <span>
-                    Golpe da falsa entrega
-                </span>
-                <img class="seta" src="../../assets/img/weui_arrow-filled.png" alt="Abrir">
-            </a>
-
-
-            <a href="#" class="golpe-falso">
-                <img src="/assets/img/img-seguranca/Discount.png" alt="">
-                <span>
-                    Promoções falsas
-                </span>
-                <img class="seta" src="../../assets/img/weui_arrow-filled.png" alt="Abrir">
-            </a>
-
-        </section>
-    </section>
-    </main>
+    </div>
+    </div>
+</template>
 
     <script src="/js/loadComponents.js"></script>
 <script src="/js/accessibility.js" defer></script>
