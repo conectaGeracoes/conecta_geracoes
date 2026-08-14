@@ -12,53 +12,54 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 24px;
 }
 
-/* Card Principal */
+/* Card Principal - Agora mais amplo e responsivo */
 .card {
   position: relative;
   background-color: #f8f9fa;
   width: 100%;
-  max-width: 800px;
-  border-radius: 16px;
-  padding: 40px 48px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 1200px; /* Expandido de 800px para 1200px */
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 64px); /* Espaçamento interno adaptável */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* Botão de Fechar (Topo Direito) */
+/* Botão de Fechar */
 .btn-close {
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 24px;
+  right: 28px;
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: clamp(18px, 1.5vw, 22px);
   font-weight: bold;
   color: #333;
   cursor: pointer;
 }
 
-/* Botão Voltar (Topo Esquerdo) */
+/* Navegação */
 .nav-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 24px;
 }
 
 .btn-nav {
-  width: 85px;
-  height: 38px;
+  width: clamp(90px, 8vw, 110px);
+  height: clamp(42px, 4vw, 50px);
   background-color: #6139cc;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff;
-  font-size: 20px;
+  font-size: clamp(20px, 2vw, 26px);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .btn-nav:hover {
@@ -66,7 +67,7 @@ body {
 }
 
 .btn-prev {
-  transform: rotate(180deg); /* Seta virada para a esquerda */
+  transform: rotate(180deg);
 }
 
 /* Layout do Conteúdo Interno */
@@ -74,71 +75,75 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: clamp(24px, 4vw, 48px);
 }
 
 /* Coluna Esquerda */
 .left-column {
-  flex: 1.2;
+  flex: 1.3;
 }
 
 .step-title {
-  font-size: 20px;
+  font-size: clamp(22px, 2.2vw, 32px); /* Ampliado dinamicamente */
   font-weight: 800;
   color: #1a1a1a;
   letter-spacing: 0.5px;
-  margin-bottom: 12px;
-  padding-left: 100px;
+  margin-bottom: 16px;
 }
 
 .step-description {
-  font-size: 18px;
+  font-size: clamp(16px, 1.5vw, 22px); /* Ampliado dinamicamente */
   color: #333;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 40px;
-  max-width: 320px;
-  padding-left: 30px;
+  max-width: 500px;
 }
 
 /* Caixa de Dica */
 .hint-box {
   background-color: #ebe5f9;
-  border-radius: 12px;
-  padding: 14px 16px;
+  border-radius: 16px;
+  padding: clamp(16px, 2vw, 24px);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  max-width: 520px;
 }
 
 .hint-icon {
-  width: 36px;
-  height: 36px;
+  width: clamp(42px, 4vw, 54px);
+  height: clamp(42px, 4vw, 54px);
   background-color: #bb8bd5;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px;
+  font-size: clamp(18px, 1.8vw, 24px);
   flex-shrink: 0;
 }
 
 .hint-text {
-  font-size: 13px;
+  font-size: clamp(14px, 1.2vw, 17px);
   color: #4a3e6d;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .hint-text strong {
   color: #4a3e6d;
 }
 
-/* Coluna do Meio - Seta Curva */
+/* Coluna do Meio - Seta */
 .middle-column {
-  flex: 0.4;
+  flex: 0.3;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.arrow-placeholder {
+  width: clamp(80px, 8vw, 120px);
+  height: clamp(80px, 8vw, 120px);
 }
 
 /* Coluna da Direita - Celular */
@@ -149,25 +154,19 @@ body {
 }
 
 .img-placeholder {
-  background-color: rgba(157, 123, 232, 0.05);
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #6c4be0;
   font-weight: 600;
-  font-size: 13px;
-  padding: 10px;
-}
-
-.arrow-placeholder {
-  width: 80px;
-  height: 80px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  padding: 16px;
 }
 
 .phone-placeholder {
-  width: 200px;
-  height: 380px;
-  border-radius: 28px;
+  width: clamp(240px, 22vw, 320px); /* Aumentado proporcionalmente */
+  height: clamp(460px, 40vw, 580px); /* Aumentado proporcionalmente */
+  border-radius: 36px;
 }
