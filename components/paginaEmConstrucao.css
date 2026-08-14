@@ -1,0 +1,159 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f6ff;
+}
+
+
+/* ================================
+   PÁGINA
+================================ */
+
+.pagina-construcao {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.construcao-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 60px 40px;
+
+    text-align: center;
+
+    background: #ffffff;
+    border-radius: 28px;
+
+    box-shadow: 0 15px 40px rgba(108, 62, 244, 0.12);
+}
+
+
+/* ================================
+   ÍCONE
+================================ */
+
+.icone {
+    font-size: 75px;
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+.construcao-card h1 {
+    margin-bottom: 18px;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    color: #6C3EF4;
+}
+
+
+/* ================================
+   TEXTO
+================================ */
+
+.construcao-card p {
+    max-width: 500px;
+
+    margin: 0 auto 35px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #555555;
+}
+
+
+/* ================================
+   BOTÃO
+================================ */
+
+.btn-voltar {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 12px;
+
+    background: #6C3EF4;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: #5630c9;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(108, 62, 244, 0.25);
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 600px) {
+
+    .pagina-construcao {
+        padding: 25px 15px;
+    }
+
+    .construcao-card {
+        padding: 45px 25px;
+        border-radius: 22px;
+    }
+
+    .icone {
+        font-size: 60px;
+    }
+
+    .construcao-card h1 {
+        font-size: 28px;
+    }
+
+    .construcao-card p {
+        font-size: 16px;
+    }
+
+    .btn-voltar {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
